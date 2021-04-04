@@ -123,19 +123,19 @@ const App = () => {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/seo">
+            <Route exact path="#/seo">
               <SEO />
             </Route>
-            <Route exact path="/reviews-and-reputation-management">
+            <Route exact path="#/reviews-and-reputation-management">
               <RandRM />
             </Route>
-            <Route exact path="/social-media-marketing">
+            <Route exact path="#/social-media-marketing">
               <SMM />
             </Route>
-            <Route exact path="/about">
+            <Route exact path="#/about">
               <About />
             </Route>
-            <Route exact path="/contact">
+            <Route exact path="#/contact">
               <Contact />
             </Route>
           </Switch>
