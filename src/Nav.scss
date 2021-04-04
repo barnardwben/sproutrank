@@ -1,0 +1,178 @@
+.navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+
+  .sprk-logo {
+    width: 12rem;
+  }
+
+  .hamburger-container {
+    cursor: pointer;
+
+    .hamburger-menu {
+      color: #f08800;
+      font-size: 2rem;
+      transition: 0.3s all ease-in-out;
+    }
+
+    .hamburger-menu:hover {
+      color: #256094;
+    }
+  }
+}
+
+.black-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  z-index: 2;
+
+  .top-black {
+    background: black;
+    transform: translateX(-100%);
+  }
+
+  .bottom-black {
+    background: black;
+    transform: translateX(100%);
+  }
+
+  // FIRST SET OF ANIMATIONS
+  .ani-one {
+    animation: slideToTheRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes slideToTheRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .ani-two {
+    animation: slideToTheLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes slideToTheLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  // SECOND SET OF ANIMATIONS
+  .ani-three {
+    animation: slideLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .ani-four {
+    animation: slideRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.hide-container {
+  display: none;
+}
+
+.nav-link-box {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transition: 0.3s all ease-in-out;
+  z-index: 3;
+
+  .nav-link-container {
+    width: 400px;
+    padding: 5rem;
+
+    .nav-link {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      font-size: 3rem;
+      transition: 0.2s all ease-in-out;
+    }
+
+    .nav-link:hover {
+      background: rgba(35, 133, 148, 0.25);
+      color: #f08800;
+      opacity: 0.7;
+    }
+
+    .active {
+      color: #256094;
+    }
+  }
+
+  .fader {
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .exit-nav-menu {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    cursor: pointer;
+
+    .exit-nav-btn {
+      font-size: 2rem;
+      color: #fff;
+      transition: 0.2s all ease-in-out;
+    }
+
+    .exit-nav-btn:hover {
+      font-size: 2rem;
+      color: #f08800;
+    }
+  }
+}
