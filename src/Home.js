@@ -1,7 +1,13 @@
 import React from "react";
+import HomeHeader from "./HomeHeader";
+import "./Home.scss";
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <>
+      <HomeHeader />
+    </>
+  );
 };
 
 export default Home;
