@@ -47,12 +47,14 @@ const Nav = () => {
       .addEventListener("click", closeAnimation);
     document.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", (e) => {
-        let hloc = e.target.innerHTML.toLowerCase();
-        if (hloc === "home") {
-          window.location.href = `https://sproutrank.netlify.app/`;
-        } else {
-          window.location.href = `https://sproutrank.netlify.app/#/${hloc}`;
-        }
+        let hloc = e.target.getAttribute("data-loc-type");
+        console.log();
+        window.location.href = `https://sproutrank.netlify.app${hloc}`;
+        // if (hloc === "home") {
+        //   window.location.href = `https://sproutrank.netlify.app/`;
+        // } else {
+        //   window.location.href = `https://sproutrank.netlify.app/#/${hloc}`;
+        // }
       });
     });
     return () => {
@@ -93,13 +95,25 @@ const Nav = () => {
               className="hlane-logo"
             />
           </Link> */}
-          <NavLink exact to="/" className="nav-link" activeClassName="active">
+          <NavLink
+            exact
+            data-loc-type="/"
+            to="/"
+            className="nav-link"
+            activeClassName="active"
+          >
             HOME
           </NavLink>
-          <NavLink to="/seo" className="nav-link" activeClassName="active">
+          <NavLink
+            data-loc-type="/seo"
+            to="/seo"
+            className="nav-link"
+            activeClassName="active"
+          >
             SEO
           </NavLink>
           <NavLink
+            data-loc-type="/reviews-and-reputation-management"
             to="/reviews-and-reputation-management"
             className="nav-link"
             activeClassName="active"
@@ -107,16 +121,27 @@ const Nav = () => {
             REVIEWS
           </NavLink>
           <NavLink
+            data-loc-type="/social-media-marketing"
             to="/social-media-marketing"
             className="nav-link"
             activeClassName="active"
           >
             SOCIAL
           </NavLink>
-          <NavLink to="/about" className="nav-link" activeClassName="active">
+          <NavLink
+            data-loc-type="/about"
+            to="/about"
+            className="nav-link"
+            activeClassName="active"
+          >
             ABOUT
           </NavLink>
-          <NavLink to="/contact" className="nav-link" activeClassName="active">
+          <NavLink
+            data-loc-type="/contact"
+            to="/contact"
+            className="nav-link"
+            activeClassName="active"
+          >
             CONTACT
           </NavLink>
         </div>
