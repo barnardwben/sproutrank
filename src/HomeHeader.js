@@ -6,7 +6,7 @@ const HomeHeader = () => {
   const getStartedRef = useRef(null);
 
   const animateBubbles = () => {
-    if (window.location.href === "http://localhost:3000/") {
+    if (window.location.href === "https://sproutrank.netlify.app/") {
       setTimeout(() => {
         circleOneRef.current.classList.add("circle-one-animation");
         circleOneRef.current.classList.remove("hide-circle-one");
