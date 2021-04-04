@@ -49,10 +49,11 @@ const Nav = () => {
       link.addEventListener("click", (e) => {
         let hloc = e.target.getAttribute("data-loc-type");
         console.log();
+
         if (hloc === "/") {
           window.location.href = `https://sproutrank.netlify.app/`;
         } else {
-          window.location.href = `https://sproutrank.netlify.app/#${hloc}`;
+          closeAnimation();
         }
       });
     });
@@ -105,7 +106,7 @@ const Nav = () => {
           </NavLink>
           <NavLink
             data-loc-type="/seo"
-            to="#/seo"
+            to="/seo"
             className="nav-link"
             activeClassName="active"
           >
@@ -113,7 +114,7 @@ const Nav = () => {
           </NavLink>
           <NavLink
             data-loc-type="/reviews-and-reputation-management"
-            to="#/reviews-and-reputation-management"
+            to="/reviews-and-reputation-management"
             className="nav-link"
             activeClassName="active"
           >
@@ -121,7 +122,7 @@ const Nav = () => {
           </NavLink>
           <NavLink
             data-loc-type="/social-media-marketing"
-            to="#/social-media-marketing"
+            to="/social-media-marketing"
             className="nav-link"
             activeClassName="active"
           >
@@ -129,7 +130,7 @@ const Nav = () => {
           </NavLink>
           <NavLink
             data-loc-type="/about"
-            to="#/about"
+            to="/about"
             className="nav-link"
             activeClassName="active"
           >
@@ -137,7 +138,7 @@ const Nav = () => {
           </NavLink>
           <NavLink
             data-loc-type="/contact"
-            to="#/contact"
+            to="/contact"
             className="nav-link"
             activeClassName="active"
           >
