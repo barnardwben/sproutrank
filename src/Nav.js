@@ -49,9 +49,9 @@ const Nav = () => {
       link.addEventListener("click", (e) => {
         let hloc = e.target.innerHTML.toLowerCase();
         if (hloc === "home") {
-          window.location.href = `http://localhost:3000`;
+          window.location.href = `https://sproutrank.netlify.app/`;
         } else {
-          window.location.href = `http://localhost:3000/${hloc}`;
+          window.location.href = `https://sproutrank.netlify.app/${hloc}`;
         }
       });
     });
