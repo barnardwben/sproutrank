@@ -49,12 +49,12 @@ const Nav = () => {
       link.addEventListener("click", (e) => {
         let hloc = e.target.getAttribute("data-loc-type");
         console.log();
-        window.location.href = `https://sproutrank.netlify.app${hloc}`;
-        // if (hloc === "home") {
-        //   window.location.href = `https://sproutrank.netlify.app/`;
-        // } else {
-        //   window.location.href = `https://sproutrank.netlify.app/#/${hloc}`;
-        // }
+
+        if (hloc === "home") {
+          window.location.href = `https://sproutrank.netlify.app/`;
+        } else {
+          window.location.href = `https://sproutrank.netlify.app/#${hloc}`;
+        }
       });
     });
     return () => {
