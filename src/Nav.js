@@ -50,8 +50,6 @@ const Nav = () => {
         let hloc = e.target.innerHTML.toLowerCase();
         if (hloc === "home") {
           window.location.href = `https://sproutrank.netlify.app/`;
-        } else {
-          window.location.href = `https://sproutrank.netlify.app/${hloc}`;
         }
       });
     });
