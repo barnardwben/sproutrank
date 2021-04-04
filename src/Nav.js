@@ -50,7 +50,7 @@ const Nav = () => {
         let hloc = e.target.getAttribute("data-loc-type");
         console.log();
 
-        if (hloc === "home") {
+        if (hloc === "/") {
           window.location.href = `https://sproutrank.netlify.app/`;
         } else {
           window.location.href = `https://sproutrank.netlify.app/#${hloc}`;
