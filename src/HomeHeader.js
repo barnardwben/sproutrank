@@ -16,9 +16,14 @@ const HomeHeader = () => {
   };
 
   const scrollHead = () => {
-    window.scrollY > 170
-      ? homeHeadRef.current.classList.add("head-scroll")
-      : homeHeadRef.current.classList.remove("head-scroll");
+    if (
+      window.location.href === "https://sproutrank.netlify.app/" ||
+      window.location.href === "http://localhost:3000/"
+    ) {
+      window.scrollY > 170
+        ? homeHeadRef.current.classList.add("head-scroll")
+        : homeHeadRef.current.classList.remove("head-scroll");
+    }
   };
 
   const animateBubbles = () => {
