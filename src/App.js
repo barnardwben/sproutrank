@@ -32,11 +32,17 @@ const App = () => {
     }, 1500);
   };
 
+  const alertUser = (e) => {
+    e.preventDefault();
+    e.returnValue = "";
+  };
+
   useEffect(() => {
     window.addEventListener("load", fadeEffect);
-
+    window.addEventListener("beforeunload", alertUser);
     return () => {
       window.removeEventListener("load", fadeEffect);
+      window.removeEventListener("beforeunload", alertUser);
     };
   }, []);
 
