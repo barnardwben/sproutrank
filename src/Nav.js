@@ -7,6 +7,13 @@ const Nav = () => {
   const topRef = useRef(null);
   const bottomRef = useRef(null);
   const navLinkContainerRef = useRef(null);
+  const navbarRef = useRef(null);
+
+  const scrollNav = () => {
+    window.scrollY > 170
+      ? navbarRef.current.classList.add("fix-nav")
+      : navbarRef.current.classList.remove("fix-nav");
+  };
 
   const runAnimation = () => {
     console.log("working");
@@ -39,6 +46,7 @@ const Nav = () => {
   };
 
   useEffect(() => {
+    window.addEventListener("scroll", scrollNav);
     document
       .querySelector(".hamburger-container")
       .addEventListener("click", runAnimation);
@@ -48,7 +56,6 @@ const Nav = () => {
     document.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", (e) => {
         let hloc = e.target.getAttribute("data-loc-type");
-        console.log();
 
         if (hloc === "/") {
           window.location.href = `https://sproutrank.netlify.app/`;
@@ -58,6 +65,7 @@ const Nav = () => {
       });
     });
     return () => {
+      window.removeEventListener("scroll", scrollNav);
       document
         .querySelector(".hamburger-container")
         .removeEventListener("click", runAnimation);
@@ -69,14 +77,14 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="navbar">
-        <Link to="/">
+      <nav ref={navbarRef} className="navbar">
+        <NavLink data-loc-type="/" to="/" className="nav-link">
           <img
             className="sprk-logo sprout-brand-logo"
             src="images\semhawaiilogo.png"
             alt="SEO Marketing SproutRank Logo"
           />
-        </Link>
+        </NavLink>
         <div className="hamburger-container">
           <i className="fas fa-bars hamburger-menu"></i>
         </div>

@@ -2,7 +2,8 @@
   background: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
+  transition: 0.3s all ease-in-out;
 
   .sprk-logo {
     width: 12rem;
@@ -18,15 +19,23 @@
     }
 
     .hamburger-menu:hover {
-      color: #256094;
+      color: #248251;
     }
   }
 }
 
+.fix-nav {
+  position: fixed;
+  width: 96%;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
 .black-container {
+  position: fixed;
   display: grid;
   grid-template-columns: 1fr;
-  position: absolute;
+  // position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
@@ -112,7 +121,7 @@
 
 .nav-link-box {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
@@ -139,7 +148,7 @@
     }
 
     .active {
-      color: #256094;
+      color: #248251;
     }
   }
 
