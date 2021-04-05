@@ -53,6 +53,9 @@ const Nav = () => {
     document
       .querySelector(".exit-nav-menu")
       .addEventListener("click", closeAnimation);
+    document.querySelector(".nav-logo").addEventListener("click", () => {
+      window.location.href = `https://sproutrank.netlify.app/`;
+    });
     document.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", (e) => {
         let hloc = e.target.getAttribute("data-loc-type");
@@ -78,13 +81,13 @@ const Nav = () => {
   return (
     <>
       <nav ref={navbarRef} className="navbar">
-        <NavLink exact data-loc-type="/" to="/" className="nav-link">
+        <Link exact to="/" className="nav-logo">
           <img
             className="sprk-logo sprout-brand-logo"
             src="images\semhawaiilogo.png"
             alt="SEO Marketing SproutRank Logo"
           />
-        </NavLink>
+        </Link>
         <div className="hamburger-container">
           <i className="fas fa-bars hamburger-menu"></i>
         </div>
