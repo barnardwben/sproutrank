@@ -78,7 +78,7 @@ const Nav = () => {
   return (
     <>
       <nav ref={navbarRef} className="navbar">
-        <NavLink data-loc-type="/" to="/" className="nav-link">
+        <NavLink exact data-loc-type="/" to="/" className="nav-link">
           <img
             className="sprk-logo sprout-brand-logo"
             src="images\semhawaiilogo.png"
