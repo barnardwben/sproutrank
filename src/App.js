@@ -34,6 +34,7 @@ const App = () => {
 
   const alertUser = (e) => {
     e.preventDefault();
+    window.location.href = `https://sproutrank.netlify.app/`;
     e.returnValue = "";
   };
 
