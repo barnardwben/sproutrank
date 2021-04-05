@@ -81,7 +81,7 @@ const Nav = () => {
   return (
     <>
       <nav ref={navbarRef} className="navbar">
-        <Link exact to="/" className="nav-logo">
+        <Link className="nav-logo">
           <img
             className="sprk-logo sprout-brand-logo"
             src="images\semhawaiilogo.png"
