@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
 import React, { useRef, useEffect } from "react";
 import ScrollToTop from "./ScrollToTop";
 import Nav from "./Nav";
@@ -13,7 +19,7 @@ import "./App.scss";
 
 const App = () => {
   const loaderRef = useRef(null);
-
+  const history = useHistory();
   const fadeEffect = () => {
     setInterval(() => {
       // if we don't set opacity 1 in CSS, then
@@ -34,6 +40,7 @@ const App = () => {
 
   const alertUser = (e) => {
     e.preventDefault();
+    history.go(0);
     window.location.reload();
     e.returnValue = "";
   };
